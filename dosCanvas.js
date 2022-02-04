@@ -1,5 +1,5 @@
 function preload() {
-  inconsolata = loadFont('assets/inconsolata.ttf');
+  inconsolata = loadFont('assets/Inconsolata.ttf');
 }
 
 var s1 = function( sketch ) {
@@ -8,7 +8,7 @@ var s1 = function( sketch ) {
    
     let canvas1 = sketch.createCanvas(sketch.windowWidth/3, sketch.windowHeight/3);
     canvas1.position(sketch.windowWidth/3,0);
-    inconsolata = sketch.loadFont('assets/inconsolata.ttf');
+    inconsolata = sketch.loadFont('assets/Inconsolata.ttf');
     sketch.textFont(inconsolata);
     sketch.textSize(sketch.width / 10);
    // sketch.textAlign(sketch.right, sketch.right);
@@ -101,7 +101,7 @@ var s3 = function( sketch ) {
   sketch.setup = function() {
     let canvas3 = sketch.createCanvas(sketch.windowWidth/3, sketch.windowHeight/3);
     canvas3.position(sketch.windowWidth/3,sketch.windowHeight/3);
-    inconsolata = sketch.loadFont('assets/inconsolata.ttf');
+    inconsolata = sketch.loadFont('assets/Inconsolata.ttf');
     sketch.textFont(inconsolata);
     sketch.textSize(sketch.width /10);
     sketch.textAlign(sketch.right, sketch.right);
