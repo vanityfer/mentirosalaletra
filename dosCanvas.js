@@ -240,5 +240,50 @@ new p5(s5);
 
 // 
 
+var hydra = new Hydra({
+  canvas: document.getElementById("myCanvas")
+})
+
+
+
+
+
+//
+
+
+
+function setup() {
+
+  let hc= loadImage('assets/images/daga.jpg');
+  createCanvas(windowWidth, windowHeight);
+  hc = select("#myCanvas")
+  hc.hide()
+  
+  pg = createGraphics(width, height)
+}
+
+function draw() {
+  let  hc= loadImage('assets/images/daga.jpg');
+ 
+  if(frameCount%30==0)print(frameRate())
+  pg.image(hc, 0, 0);
+  pg.loadPixels()
+  d = pg.pixelDensity()
+  noStroke()
+  for (let i = 0; i < 200; i++) {
+    let x = int(random(width));
+    let y = int(random(height));
+    let id = 4 * d * (x + y * width * d)
+    fill(pg.pixels[id+0],pg.pixels[id+1],pg.pixels[id+2])
+    //fill(pg.get(x, y))
+    ellipse(x, y, 5);
+  }
+}
+
+
+
+
+
+
 
 
